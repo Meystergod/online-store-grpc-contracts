@@ -1,0 +1,20 @@
+syntax = "proto3";
+
+package online_store.products.v1;
+
+option go_package = "github.com/Meystergod/online-store-grpc-contracts/gen/go/online_store/products/v1;pb_online_store_products";
+
+message Product {
+  uint32 id = 1;
+  string brand = 2;
+  string title = 3;
+  string description = 4;
+  string price = 5;
+  string image_id = 6;
+  string specifications = 7;
+  int64 updated_at = 8;
+  int64 created_at = 9;
+  uint32 category_id = 10;
+  uint32 discount_id = 11;
+  uint32 inventory_id = 12;
+}

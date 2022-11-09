@@ -1,0 +1,43 @@
+syntax = "proto3";
+
+package online_store.products.v1;
+
+option go_package = "github.com/Meystergod/online-store-grpc-contracts/gen/go/online_store/products/v1;pb_online_store_products";
+
+import "online_store/products/v1/product.proto";
+import "common/filter/v1/filter.proto";
+
+service ProductService {
+  rpc CreateProduct(CreateProductRequest) returns (CreateProductResponse) {}
+  rpc GetAllProduct(GetAllProductRequest) returns (GetAllProductResponse) {}
+}
+
+message CreateProductRequest {
+  string brand = 1;
+  string title = 2;
+  string description = 3;
+  string price = 4;
+  string image_id = 5;
+  string specifications = 6;
+  uint32 category_id = 7;
+  uint32 discount_id = 8;
+  uint32 inventory_id = 9;
+}
+
+message CreateProductResponse {
+  Product product = 1;
+}
+
+message GetAllProductRequest {
+  common.filter.v1.Pagination pagination = 1;
+  common.filter.v1.StringFieldFilter brand = 2;
+  common.filter.v1.StringFieldFilter title = 3;
+  common.filter.v1.IntFieldFilter price = 4;
+  common.filter.v1.IntFieldFilter category_id = 5;
+  common.filter.v1.IntFieldFilter discount_id = 6;
+  common.filter.v1.IntFieldFilter inventory_id = 7;
+}
+
+message GetAllProductResponse {
+  repeated Product products = 1;
+}
