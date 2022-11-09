@@ -17,7 +17,7 @@ message CreateProductRequest {
   string title = 2;
   string description = 3;
   string price = 4;
-  string image_id = 5;
+  optional string image_id = 5;
   string specifications = 6;
   uint32 category_id = 7;
   uint32 discount_id = 8;

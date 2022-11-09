@@ -37,9 +37,9 @@ export interface CreateProductRequest {
      */
     price: string;
     /**
-     * @generated from protobuf field: string image_id = 5;
+     * @generated from protobuf field: optional string image_id = 5;
      */
-    imageId: string;
+    imageId?: string;
     /**
      * @generated from protobuf field: string specifications = 6;
      */
@@ -116,7 +116,7 @@ class CreateProductRequest$Type extends MessageType<CreateProductRequest> {
             { no: 2, name: "title", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
             { no: 3, name: "description", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
             { no: 4, name: "price", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
-            { no: 5, name: "image_id", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
+            { no: 5, name: "image_id", kind: "scalar", opt: true, T: 9 /*ScalarType.STRING*/ },
             { no: 6, name: "specifications", kind: "scalar", T: 9 /*ScalarType.STRING*/ },
             { no: 7, name: "category_id", kind: "scalar", T: 13 /*ScalarType.UINT32*/ },
             { no: 8, name: "discount_id", kind: "scalar", T: 13 /*ScalarType.UINT32*/ },
@@ -124,7 +124,7 @@ class CreateProductRequest$Type extends MessageType<CreateProductRequest> {
         ]);
     }
     create(value?: PartialMessage<CreateProductRequest>): CreateProductRequest {
-        const message = { brand: "", title: "", description: "", price: "", imageId: "", specifications: "", categoryId: 0, discountId: 0, inventoryId: 0 };
+        const message = { brand: "", title: "", description: "", price: "", specifications: "", categoryId: 0, discountId: 0, inventoryId: 0 };
         globalThis.Object.defineProperty(message, MESSAGE_TYPE, { enumerable: false, value: this });
         if (value !== undefined)
             reflectionMergePartial<CreateProductRequest>(this, message, value);
@@ -147,7 +147,7 @@ class CreateProductRequest$Type extends MessageType<CreateProductRequest> {
                 case /* string price */ 4:
                     message.price = reader.string();
                     break;
-                case /* string image_id */ 5:
+                case /* optional string image_id */ 5:
                     message.imageId = reader.string();
                     break;
                 case /* string specifications */ 6:
@@ -186,8 +186,8 @@ class CreateProductRequest$Type extends MessageType<CreateProductRequest> {
         /* string price = 4; */
         if (message.price !== "")
             writer.tag(4, WireType.LengthDelimited).string(message.price);
-        /* string image_id = 5; */
-        if (message.imageId !== "")
+        /* optional string image_id = 5; */
+        if (message.imageId !== undefined)
             writer.tag(5, WireType.LengthDelimited).string(message.imageId);
         /* string specifications = 6; */
         if (message.specifications !== "")
