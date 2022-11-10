@@ -12,6 +12,7 @@ import type { PartialMessage } from "@protobuf-ts/runtime";
 import { reflectionMergePartial } from "@protobuf-ts/runtime";
 import { MESSAGE_TYPE } from "@protobuf-ts/runtime";
 import { MessageType } from "@protobuf-ts/runtime";
+import { Sort } from "../../../common/filter/v1/sort";
 import { IntFieldFilter } from "../../../common/filter/v1/filter";
 import { StringFieldFilter } from "../../../common/filter/v1/filter";
 import { Pagination } from "../../../common/filter/v1/filter";
@@ -98,6 +99,10 @@ export interface GetAllProductRequest {
      * @generated from protobuf field: common.filter.v1.IntFieldFilter inventory_id = 7;
      */
     inventoryId?: IntFieldFilter;
+    /**
+     * @generated from protobuf field: common.filter.v1.Sort sort = 8;
+     */
+    sort?: Sort;
 }
 /**
  * @generated from protobuf message online_store.products.v1.GetAllProductResponse
@@ -268,7 +273,8 @@ class GetAllProductRequest$Type extends MessageType<GetAllProductRequest> {
             { no: 4, name: "price", kind: "message", T: () => IntFieldFilter },
             { no: 5, name: "category_id", kind: "message", T: () => IntFieldFilter },
             { no: 6, name: "discount_id", kind: "message", T: () => IntFieldFilter },
-            { no: 7, name: "inventory_id", kind: "message", T: () => IntFieldFilter }
+            { no: 7, name: "inventory_id", kind: "message", T: () => IntFieldFilter },
+            { no: 8, name: "sort", kind: "message", T: () => Sort }
         ]);
     }
     create(value?: PartialMessage<GetAllProductRequest>): GetAllProductRequest {
@@ -304,6 +310,9 @@ class GetAllProductRequest$Type extends MessageType<GetAllProductRequest> {
                 case /* common.filter.v1.IntFieldFilter inventory_id */ 7:
                     message.inventoryId = IntFieldFilter.internalBinaryRead(reader, reader.uint32(), options, message.inventoryId);
                     break;
+                case /* common.filter.v1.Sort sort */ 8:
+                    message.sort = Sort.internalBinaryRead(reader, reader.uint32(), options, message.sort);
+                    break;
                 default:
                     let u = options.readUnknownField;
                     if (u === "throw")
@@ -337,6 +346,9 @@ class GetAllProductRequest$Type extends MessageType<GetAllProductRequest> {
         /* common.filter.v1.IntFieldFilter inventory_id = 7; */
         if (message.inventoryId)
             IntFieldFilter.internalBinaryWrite(message.inventoryId, writer.tag(7, WireType.LengthDelimited).fork(), options).join();
+        /* common.filter.v1.Sort sort = 8; */
+        if (message.sort)
+            Sort.internalBinaryWrite(message.sort, writer.tag(8, WireType.LengthDelimited).fork(), options).join();
         let u = options.writeUnknownFields;
         if (u !== false)
             (u == true ? UnknownFieldHandler.onWrite : u)(this.typeName, message, writer);

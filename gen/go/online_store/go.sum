@@ -1,7 +1,7 @@
 cloud.google.com/go v0.26.0/go.mod h1:aQUYkXzVsufM+DwF1aE+0xfcU+56JwCaLick0ClmMTw=
 github.com/BurntSushi/toml v0.3.1/go.mod h1:xHWCNGjB5oqiDr8zfno3MHue2Ht5sIBksp03qcyfWMU=
-github.com/Meystergod/online-store-grpc-contracts/gen/go/common v0.0.0-20221109063116-471512d78a0b h1:yUQ7CzYD8zxYwaTUXpmqScDJNI+npnz9ihpt6DfoBKk=
-github.com/Meystergod/online-store-grpc-contracts/gen/go/common v0.0.0-20221109063116-471512d78a0b/go.mod h1:AIemYX4zaRtqI4/bamd/bgRj7WyMo7ATBEKl22DC50w=
+github.com/Meystergod/online-store-grpc-contracts/gen/go/common v0.0.0-20221109154042-8b80bf465afa h1:kxuCiAc5BxN9gzXp/vJIMFa/J99AmuBG64LM1fC4vvY=
+github.com/Meystergod/online-store-grpc-contracts/gen/go/common v0.0.0-20221109154042-8b80bf465afa/go.mod h1:AIemYX4zaRtqI4/bamd/bgRj7WyMo7ATBEKl22DC50w=
 github.com/census-instrumentation/opencensus-proto v0.2.1/go.mod h1:f6KPmirojxKA12rnyqOA5BBL4O983OfeGPqjHWSTneU=
 github.com/client9/misspell v0.3.4/go.mod h1:qj6jICC3Q7zFZvVWo7KLAzC3yx5G7kyvSDkc90ppPyw=
 github.com/envoyproxy/go-control-plane v0.9.1-0.20191026205805-5f8ba28d4473/go.mod h1:YTl/9mNaCwkRvm6d1a2C3ymFceY/DCBVvsKhRF0iEA4=

@@ -6,6 +6,7 @@ option go_package = "github.com/Meystergod/online-store-grpc-contracts/gen/go/on
 
 import "online_store/products/v1/product.proto";
 import "common/filter/v1/filter.proto";
+import "common/filter/v1/sort.proto";
 
 service ProductService {
   rpc CreateProduct(CreateProductRequest) returns (CreateProductResponse) {}
@@ -36,6 +37,7 @@ message GetAllProductRequest {
   common.filter.v1.IntFieldFilter category_id = 5;
   common.filter.v1.IntFieldFilter discount_id = 6;
   common.filter.v1.IntFieldFilter inventory_id = 7;
+  common.filter.v1.Sort sort = 8;
 }
 
 message GetAllProductResponse {

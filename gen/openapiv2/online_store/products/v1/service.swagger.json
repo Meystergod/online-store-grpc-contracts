@@ -148,6 +148,15 @@
         }
       }
     },
+    "v1Sort": {
+      "type": "object",
+      "properties": {
+        "field": {
+          "type": "string"
+        }
+      },
+      "title": "Sorting array"
+    },
     "v1StringFieldFilter": {
       "type": "object",
       "properties": {

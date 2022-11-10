@@ -3,7 +3,7 @@ module github.com/Meystergod/online-store-grpc-contracts/gen/go/online_store
 go 1.19
 
 require (
-	github.com/Meystergod/online-store-grpc-contracts/gen/go/common v0.0.0-20221109063116-471512d78a0b
+	github.com/Meystergod/online-store-grpc-contracts/gen/go/common v0.0.0-20221109154042-8b80bf465afa
 	google.golang.org/grpc v1.50.1
 	google.golang.org/protobuf v1.28.1
 )
